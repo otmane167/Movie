@@ -1,0 +1,85 @@
+.favorites {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.favorites h2 {
+  margin-bottom: 2rem;
+  text-align: center; /* title centered */
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Empty favorites message */
+.favorites-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.favorites-empty h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #e50914;
+}
+
+.favorites-empty p {
+  color: #999;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Grid for favorite movies */
+.favorites .movies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 180px); /* 4 per row with fixed width */
+  gap: 20px;
+  justify-content: center; /* center the grid */
+}
+
+/* Favorite movie cards slightly bigger */
+.favorites .movie-card {
+  width: 180px; /* fixed width */
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #222;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.favorites .movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #444;
+}
+
+.favorites .movie-card .movie-info {
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.favorites .movie-card .movie-overlay {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Animation for new favorites being added */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
